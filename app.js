@@ -27,7 +27,7 @@ const app = express();
 const localDb="mongodb://localhost:27017/yelp-camp"
 const atlasDb=process.env.DB_URL
 
-mongoose.connect(atlasDb)
+mongoose.connect(localDb)
     .then(() => {
         console.log('Database Connection Succsessful');
     }).catch((e) => {
